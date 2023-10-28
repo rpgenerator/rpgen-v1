@@ -1,15 +1,15 @@
 <!DOCTYPE html> <!-- Sets document type as html -->
 <html lang="en"> <!-- Sets language as English -->
-    <head> 
+    <head> <!-- start of required stuff -->
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href=rpgensample.css>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- lets us be able to see our page. -->
+        <link rel="stylesheet" href=rpgensample.css><!-- gives us access to our css/the stuff that makes it look good. -->
         <title>Random Password Generator</title> <!-- Gives us the search bar address. -->
-    </head>
+    </head><!-- end of required stuff. -->
     <body><!-- start of HTML. -->
-        <div class="body">
+        <div class="body"><!-- creates the background of the page -->
         
-            <div class="box">
+            <div class="box"><!-- generates the place where the ui will go in. -->
                 <h2>Random Password Generator</h2>
                 <input type="text" name="" placeholder="Create password" id="password" readonly> <!-- Where our password is generated when another button clicked on. -->
             
@@ -28,8 +28,8 @@
             var passwordLength = 12; //shows us how long the pasword is.
             var password = "";//a template of the password before it is generated.
             for (var i = 0; i <= passwordLength; i++) {//variable for the password length.
-                var randomNumber = Math.floor(Math.random() * chars.length);
-                password += chars.substring(randomNumber, randomNumber +1);
+                var randomNumber = Math.floor(Math.random() * chars.length);//the stuff for making it random
+                password += chars.substring(randomNumber, randomNumber +1);//
             }
             document.getElementById("password").value = password;
         }
