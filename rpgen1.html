@@ -4,9 +4,9 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href=rpgensample.css>
-        <title>Random Password Generator</title> <!-- Gives us the title on the website. -->
+        <title>Random Password Generator</title> <!-- Gives us the search bar address. -->
     </head>
-    <body>
+    <body><!-- start of HTML. -->
         <div class="body">
         
             <div class="box">
@@ -20,14 +20,14 @@
                 </table>
             </div>
         </div>
-    </body>
-    <script>
-        var password=document.getElementById("password");
-        function genPassword() {
-            var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            var passwordLength = 12;
-            var password = "";
-            for (var i = 0; i <= passwordLength; i++) {
+    </body><!-- end of HTML. -->
+    <script>//Start of the javascript.
+        var password=document.getElementById("password");//variable of the password.
+        function genPassword() {// the generate password function.
+            var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // all of the charachters for generating the password
+            var passwordLength = 12; //shows us how long the pasword is.
+            var password = "";//a template of the password before it is generated.
+            for (var i = 0; i <= passwordLength; i++) {//variable for the password length.
                 var randomNumber = Math.floor(Math.random() * chars.length);
                 password += chars.substring(randomNumber, randomNumber +1);
             }
@@ -39,5 +39,5 @@
             copyText.setSelectionRange(0, 999);
             document.execCommand("copy");   
         }
-    </script>
- </html>
+    </script><!-- End of the javascript. -->
+ </html> <!-- End of HTML. -->
