@@ -29,15 +29,15 @@
             var password = "";//a template of the password before it is generated.
             for (var i = 0; i <= passwordLength; i++) {//variable for the password length.
                 var randomNumber = Math.floor(Math.random() * chars.length);//the stuff for making it random
-                password += chars.substring(randomNumber, randomNumber +1);//
+                password += chars.substring(randomNumber, randomNumber +1);//makes the random numbers generate
             }
-            document.getElementById("password").value = password;
+            document.getElementById("password").value = password;//makes the password generate
         }
-        function copyPassword() {
-            var copyText = document.getElementById("password");
-            copyText.select();
-            copyText.setSelectionRange(0, 999);
-            document.execCommand("copy");   
+        function copyPassword() {//makes the copy text a function
+            var copyText = document.getElementById("password");//code for copying the text
+            copyText.select();//lets us copy the text
+            copyText.setSelectionRange(0, 999);//lets us click on the copy button to copy the text
+            document.execCommand("copy");   //makes the copy button, well copy. ¯\_(ツ)_/¯
         }
     </script><!-- End of the javascript. -->
  </html> <!-- End of HTML. -->
