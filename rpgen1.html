@@ -1,7 +1,7 @@
 <!DOCTYPE html> <!-- Sets document type as html -->
 <html lang="en"> <!-- Sets language as English -->
     <head> <!-- start of required stuff -->
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- gives us our page. -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- lets us be able to see our page. -->
         <link rel="stylesheet" href=rpgensample.css><!-- gives us access to our css/the stuff that makes it look good. -->
         <title>Random Password Generator</title> <!-- Gives us the search bar address. -->
@@ -9,17 +9,17 @@
     <body><!-- start of HTML. -->
         <div class="body"><!-- creates the background of the page -->
         
-            <div class="box"><!-- generates the place where the ui will go in. -->
-                <h2>Random Password Generator</h2>
+            <div class="box"><!-- generates the place where the UI will go in. -->
+                <h2>Random Password Generator</h2><!-- the title on the actual page -->
                 <input type="text" name="" placeholder="Create password" id="password" readonly> <!-- Where our password is generated when another button clicked on. -->
             
      
-                <table>
-                <th><div id="button" class="btn1"onclick="genPassword()">Generate</div></th>
-                <th><a  id="button" class="btn2" onclick="copyPassword()">Copy</a></th>
-                </table>
-            </div>
-        </div>
+                <table><!-- start of the buttons -->
+                <th><div id="button" class="btn1"onclick="genPassword()">Generate</div></th><!-- the generate password button -->
+                <th><a  id="button" class="btn2" onclick="copyPassword()">Copy</a></th><!-- the copy password button -->
+                </table><!-- end of buttons -->
+            </div><!-- end of the UI. -->
+        </div><!--end of adding stuff that you can see to the page -->
     </body><!-- end of HTML. -->
     <script>//Start of the javascript.
         var password=document.getElementById("password");//variable of the password.
