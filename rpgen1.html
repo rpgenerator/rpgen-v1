@@ -13,7 +13,7 @@
                 <h2>Brady Family </h2><!-- the title first line on the actual page -->
                 <h2>Random Password Generator</h2> <!-- the title second line on the actual page -->
                 <input type="text" name="" placeholder="Create password" id="password" readonly> <!-- Where our password is generated when another button clicked on. -->
-            
+                
      
                 <table><!-- start of the buttons -->
                 <th><div id="button" class="btn1"onclick="genPassword()">Generate</div></th><!-- the generate password button -->
@@ -26,7 +26,7 @@
         var password=document.getElementById("password");//variable of the password.
         function genPassword() {// the generate password function.
             var chars = "0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // all of the charachters for generating the password
-            var passwordLength = 12; //shows us how long the pasword is.
+            var passwordLength = Math.floor(Math.random() * 20); //shows us how long the pasword is.
             var password = "";//a template of the password before it is generated.
             for (var i = 0; i <= passwordLength; i++) {//variable for the password length.
                 var randomNumber = Math.floor(Math.random() * chars.length);//the stuff for making it random
@@ -36,7 +36,7 @@
         }
         function copyPassword() {//makes the copy text a function
             var copyText = document.getElementById("password");//code for copying the text
-            copyText.select();//lets us copy the text
+            copyText.select();//lets us select the text so we can copy it
             copyText.setSelectionRange(0, 999);//lets us click on the copy button to copy the text
             document.execCommand("copy");   //makes the copy button, well copy. ¯\_(ツ)_/¯
         }
